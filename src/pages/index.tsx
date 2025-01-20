@@ -34,10 +34,10 @@ export default function IndexPage() {
     <div className="container mx-auto px-4 py-16 space-y-32">
       {/* Language Selector */}
       <div className="flex justify-end mb-4">
-        <Select onChange={(e) => changeLanguage(e.target.value)}>
+        <select onChange={(e: React.ChangeEvent<HTMLSelectElement>) => changeLanguage(e.target.value)} className="border rounded p-2">
           <option value="en">English</option>
           <option value="de">Deutsch</option>
-        </Select>
+        </select>
       </div>
 
       {/* Search and Filter Section */}
