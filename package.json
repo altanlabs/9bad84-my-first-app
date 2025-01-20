@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@radix-ui/themes": "^0.2.0",
+    "@radix-ui/themes": "0.0.1",
     "framer-motion": "^4.1.17",
     "i18next": "^21.6.3",
     "lucide-react": "^0.14.0",
