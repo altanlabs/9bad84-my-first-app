@@ -43,9 +43,9 @@ export default function IndexPage() {
       {/* Search and Filter Section */}
       <motion.section
         className="space-y-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        initial=opacity: 0
+        animate=opacity: 1
+        transition=duration: 0.8
       >
         <h2 className="text-2xl font-bold">{t('findJob')}</h2>
         <div className="flex gap-4">
