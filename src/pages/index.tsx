@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Component, Palette, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 
@@ -37,13 +36,13 @@ export default function IndexPage() {
         <h2 className="text-2xl font-bold">Find Your Dream Job</h2>
         <div className="flex gap-4">
           <Input placeholder="Search jobs..." className="flex-1" />
-          <Select className="w-48">
+          <Select>
             <option>Location</option>
             <option>Remote</option>
             <option>New York</option>
             <option>San Francisco</option>
           </Select>
-          <Select className="w-48">
+          <Select>
             <option>Job Type</option>
             <option>Full-time</option>
             <option>Part-time</option>
