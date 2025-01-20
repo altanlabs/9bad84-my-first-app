@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
@@ -8,13 +8,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.5 }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   animate: {
     transition: {
       staggerChildren: 0.1
@@ -69,8 +69,7 @@ export default function IndexPage() {
       <motion.section
         variants={staggerContainer}
         initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
+        animate="animate"
         className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
       >
         {[1, 2, 3, 4, 5, 6].map((job) => (
@@ -92,8 +91,7 @@ export default function IndexPage() {
       {/* Company Profiles Section */}
       <motion.section
         initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
+        animate="animate"
         className="space-y-8"
       >
         <motion.div variants={fadeInUp} className="text-center">
