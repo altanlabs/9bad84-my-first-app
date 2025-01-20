@@ -1,0 +1,14 @@
+{
+  "welcome": "Welcome to Your New App",
+  "findJob": "Find Your Dream Job",
+  "location": "Location",
+  "jobType": "Job Type",
+  "remote": "Remote",
+  "newYork": "New York",
+  "sanFrancisco": "San Francisco",
+  "fullTime": "Full-time",
+  "partTime": "Part-time",
+  "contract": "Contract",
+  "featuredCompanies": "Featured Companies",
+  "exploreCompanies": "Explore top companies hiring now."
+}

@@ -18,6 +18,8 @@ import Index from "./pages/index";
 import NotFound from "./pages/NotFound";
 import DashboardPage from "./pages/dashboard/DashboardPage";
 import { useTheme } from "./theme/use-theme";
+import i18n from './i18n';
+import { useTranslation } from 'react-i18next';
 
 const appName = "My app";
 
@@ -66,6 +68,7 @@ const dashboardSidebar = {
 
 const App = () => {
   const { theme } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">

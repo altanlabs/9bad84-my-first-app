@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -23,9 +24,22 @@ const staggerContainer = {
 
 export default function IndexPage() {
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <div className="container mx-auto px-4 py-16 space-y-32">
+      {/* Language Selector */}
+      <div className="flex justify-end mb-4">
+        <Select onChange={(e) => changeLanguage(e.target.value)}>
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+        </Select>
+      </div>
+
       {/* Search and Filter Section */}
       <motion.section
         className="space-y-4"
@@ -33,20 +47,20 @@ export default function IndexPage() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-2xl font-bold">Find Your Dream Job</h2>
+        <h2 className="text-2xl font-bold">{t('findJob')}</h2>
         <div className="flex gap-4">
           <Input placeholder="Search jobs..." className="flex-1" />
           <Select>
-            <option>Location</option>
-            <option>Remote</option>
-            <option>New York</option>
-            <option>San Francisco</option>
+            <option>{t('location')}</option>
+            <option>{t('remote')}</option>
+            <option>{t('newYork')}</option>
+            <option>{t('sanFrancisco')}</option>
           </Select>
           <Select>
-            <option>Job Type</option>
-            <option>Full-time</option>
-            <option>Part-time</option>
-            <option>Contract</option>
+            <option>{t('jobType')}</option>
+            <option>{t('fullTime')}</option>
+            <option>{t('partTime')}</option>
+            <option>{t('contract')}</option>
           </Select>
         </div>
       </motion.section>
@@ -84,10 +98,10 @@ export default function IndexPage() {
       >
         <motion.div variants={fadeInUp} className="text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Featured Companies
+            {t('featuredCompanies')}
           </h2>
           <p className="mx-auto mt-4 max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-            Explore top companies hiring now.
+            {t('exploreCompanies')}
           </p>
         </motion.div>
 
